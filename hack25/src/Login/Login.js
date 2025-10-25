@@ -7,37 +7,37 @@ export default function Login() {
     <>
       <Navbar />
       <div class="container">
-      <div class="left-section">
-        <h1>Non Profit Care <br /> Program</h1>
+        <div class="left-section">
+          <h1>Non Profit Care <br /> Program</h1>
 
-        <form id="loginForm">
-          <label for="accountNumber">Account Number</label>
-          <input
-            type="text"
-            id="accountNumber"
-            placeholder="A2489349 S92329 39220"
-          />
+          <form id="loginForm">
+            <label for="accountNumber">Account Number</label>
+            <input
+              type="text"
+              id="accountNumber"
+              placeholder="A2489349 S92329 39220"
+            />
 
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="*******************"
-          />
-          <small><a href="#">Forgot your password or account number?</a></small>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="*******************"
+            />
+            <small><a href="#">Forgot your password or account number?</a></small>
 
-          <button type="submit">Login</button>
-          <small>
-            Don't have an account? <a href="#"></a>
-            <Link to="/register">Join our program</Link>
-          </small>
-        </form>
+            <button type="submit">Login</button>
+            <small>
+              Don't have an account? <a href="#"></a>
+              <Link to="/select">Join our program</Link>
+            </small>
+          </form>
+        </div>
+
+        <div class="right-section">
+          <img src={'/imgs/office.png'} alt="Wind turbine field"/>
+        </div>
       </div>
-
-      <div class="right-section">
-        <img src={'/imgs/office.png'} alt="Wind turbine field"/>
-      </div>
-    </div>
-  </>
+    </>
   )
 }
