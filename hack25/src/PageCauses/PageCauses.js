@@ -1,0 +1,136 @@
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import causesData from "../causes.json";
+import "./PageCauses.css"; 
+
+export default function PageCauses() {
+  document.body.style.backgroundColor = '#F9FDFF';
+  const filters = [
+    "Infrastructure", "Community", "Hunger",
+    "Education", "Sustainability", "Refugees", "Humanitarian"
+  ];
+
+  const Logo = "/imgs/logoCapOne.png";
+
+  const causes = causesData;
+  /*const causes = [
+    { img: "/imgs/img1.jpg", tags: ["Community", "Education"], name: "Hola Martha Learn Together" },
+    { img: "/imgs/img2.jpg", tags: ["Hunger", "Humanitarian"], name: "OMS, more like, OMG" },
+    { img: "/imgs/img3.jpg", tags: ["Infrastructure", "Sustainability"], name: "Angie besties with Olive R" },
+    { img: "/imgs/img4.jpg", tags: ["Refugees", "Community"], name: "OMS Learn Together" },
+    { img: "/imgs/img5.jpg", tags: ["Education", "Infrastructure"], name: "OMS Learn Together" },
+    { img: "/imgs/img6.jpg", tags: ["Sustainability", "Hunger"], name: "OMS Learn Together" },
+  ];*/
+
+  // Estado para filtros seleccionados y búsqueda
+  const [activeFilters, setActiveFilters] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Función para alternar filtros
+  const toggleFilter = (filter) => {
+    setActiveFilters((prev) =>
+      prev.includes(filter)
+        ? prev.filter((f) => f !== filter)
+        : [...prev, filter]
+    );
+  };
+
+  // Filtrar las causas según los filtros seleccionados y el término de búsqueda
+  const filteredCauses = causes.filter(({ name, tags }) => {
+    const matchesSearch = name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilters = activeFilters.every((filter) => tags.includes(filter));
+    return matchesSearch && (activeFilters.length === 0 || matchesFilters);
+  });
+
+  const location = useLocation();
+  const navItems = [
+    { name: "Causes", path: "/causes" },
+    { name: "Transactions", path: "/transactions" },
+    { name: "Bills & Receipts", path: "/bills" },
+    { name: "Analytics", path: "/analytics" },
+    { name: "News", path: "/news" },
+  ];
+
+  return (
+    <>
+      {/* 🔹 NAVBAR */}
+      <div className="navbar">
+        <Link to="/" className="navbar-logo">
+          <img src="/imgs/logoCapOne.png" alt="Capital One" />
+        </Link>
+
+        <div className="navbar-links">
+          {navItems.map((item) => {
+            const isActive = location.pathname === item.path;
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`navbar-item ${isActive ? "active" : ""}`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </div>
+
+        <button className="account-btn">Account</button>
+      </div>
+
+      {/* 🔹 TITLE */}
+      <div className="page-title">
+        <h1>Choose your cause</h1>
+      </div>
+
+      {/* 🔹 SEARCH BAR */}
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search by cause name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+
+      {/* 🔹 FILTER BUTTONS */}
+      <div className="filters-container">
+        {filters.map((filter) => {
+          const isActive = activeFilters.includes(filter);
+          return (
+            <button
+              key={filter}
+              onClick={() => toggleFilter(filter)}
+              className={`filter-btn ${isActive ? "active" : ""}`}
+            >
+              {filter}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* 🔹 GRID */}
+      <div className="causes-grid">
+        {filteredCauses.map(({ img, tags, name }, i) => (
+          <div key={i} className="cause-card">
+            <img src={img} alt={name} className="cause-img" />
+            <div className="cause-content">
+              <h3>{name}</h3>
+
+              <div className="cause-tags">
+                {tags.map((tag, idx) => (
+                  <span key={idx} className="cause-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <a className="learn-more"> {/*href="#" */}
+                Learn more →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}

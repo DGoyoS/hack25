@@ -8,6 +8,7 @@ import LoginDonor from "./Login/LoginDonor";
 import RegisterDonor from "./Register/RegisterDonor";
 import SelectPage from "./Select/Select";
 
+import PageCauses from "./PageCauses/PageCauses";
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login-non-profit" element={<LoginNGO />} />
         <Route path="/login" element={<LoginDonor />} />
         <Route path="/selection" element={<SelectPage />} />
+        <Route path="/causes" element={<PageCauses />} />
       </Routes>
     </div>
   );
