@@ -26,7 +26,7 @@ const Navbar = () => (
       </ul>
 
       <div className="navbar-left">
-        <Link to="/account" className="login-button">Log In</Link>
+        <Link to="/login" className="login-button">Log In</Link>
       </div>
     </div>
   </nav>

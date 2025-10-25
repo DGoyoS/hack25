@@ -15,11 +15,11 @@ export default function HomePageONG() {
           </p>
         </div>
 
-        <div class Name="home-image-content">
+        <div className="home-image-content">
           <div className="home-buttons">
-            <Link to="/InfoNGO"><button>Join the Program</button></Link>
+            <Link to="/select"><button>Join the Program</button></Link>
           </div>
-          <img className = "home-image" src={'/imgs/HomePageImage.png'} width="100%" height="100%"></img>
+          <img className="home-image" src={'/imgs/HomePageImage.png'} width="100%" height="100%"></img>
         </div>
       </div>
     </>
