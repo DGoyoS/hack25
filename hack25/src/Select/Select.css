@@ -36,13 +36,12 @@ body, html {
 }
 
 .left {
-  background: url('../assets/office.png')
+  background: 
     center/cover no-repeat;
 }
 
 .right {
-  background: url('../assets/wind.png')
-    center/cover no-repeat;
+  background: center/cover no-repeat;
 }
 
 .overlay {

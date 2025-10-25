@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import './Login.css';
-import wind from '../assets/wind.png';
 
 export default function LoginNGO() {
   return (
@@ -33,7 +32,7 @@ export default function LoginNGO() {
     </div>
 
     <div class="right-section">
-      <img src={wind} alt="Wind turbine field"/>
+      <img src={'/imgs/wind.png'} alt="Wind turbine field"/>
     </div>
   </div>
   )

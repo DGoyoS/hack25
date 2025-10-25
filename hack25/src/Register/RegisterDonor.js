@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import './Register.css';
-import office from '../assets/office.png';
 
 export default function RegisterDonor() {
   return (
@@ -48,7 +47,7 @@ export default function RegisterDonor() {
     </div>
 
     <div class="right-section">
-      <img src={office} alt="Wind turbine field"/>
+      <img src={'/imgs/office.png'} alt="Wind turbine field"/>
     </div>
   </div>
   )

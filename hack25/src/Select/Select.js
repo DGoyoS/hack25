@@ -12,7 +12,7 @@ export default function SelectPage() {
     >
       <div
         className={`panel left ${activePanel === "left" ? "active" : ""}`}
-        onMouseEnter={() => setActivePanel("left")}
+        onMouseEnter={() => setActivePanel("left")} style={{ background: `url(${'/imgs/office.png'}) center/cover no-repeat` }}
       >
         <Link to="/register">
         <div className="overlay"></div>
@@ -26,7 +26,7 @@ export default function SelectPage() {
 
       <div
         className={`panel right ${activePanel === "right" ? "active" : ""}`}
-        onMouseEnter={() => setActivePanel("right")}
+        onMouseEnter={() => setActivePanel("right")} style={{ background: `url(${'/imgs/wind.png'}) center/cover no-repeat` }}
       >
         <Link to="/register-non-profit">
         <div className="overlay"></div>
