@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import './Register.css';
+import './Login.css';
 import Navbar from "../Navigation/Navbar";
 
-export default function RegisterDonor() {
+export default function Login() {
   return (
     <>
       <Navbar />
@@ -11,22 +11,12 @@ export default function RegisterDonor() {
         <h1>Non Profit Care <br /> Program</h1>
 
         <form id="loginForm">
-          <label for="accountName">Account Name</label>
-          <input
-            type="text"
-            id="accountName"
-            placeholder="Organization Name"
-          />
-
           <label for="accountNumber">Account Number</label>
           <input
             type="text"
             id="accountNumber"
             placeholder="A2489349 S92329 39220"
           />
-          <small>
-            Don't have an account? <a href="#">Create a bank account with Capital One</a>
-          </small>
 
           <label for="password">Password</label>
           <input
@@ -34,17 +24,12 @@ export default function RegisterDonor() {
             id="password"
             placeholder="*******************"
           />
-          <label for="password">Confirm Password</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="*******************"
-          />
+          <small><a href="#">Forgot your password or account number?</a></small>
 
-          <button type="submit">Join the Community</button>
+          <button type="submit">Login</button>
           <small>
-            Already part of the program? <a href="#"></a>
-            <Link to="/login">Login</Link>
+            Don't have an account? <a href="#"></a>
+            <Link to="/register">Join our program</Link>
           </small>
         </form>
       </div>
