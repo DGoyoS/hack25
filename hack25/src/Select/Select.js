@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Select.css";
-import Navbar from "../Navigation/Navbar";
+import Navbar from "../Navigation/NavbarCapital";
 
 export default function SelectPage() {
   const [activePanel, setActivePanel] = useState(null);

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import './Register.css';
-import Navbar from "../Navigation/Navbar";
+import Navbar from "../Navigation/NavbarCapital";
 
 export default function RegisterNGO() {
   return (
