@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navigation/Navbar";
 import "./InfoNGO.css";
-import ImageInfoNGO from "../assets/InfoNGO.png";
-import ImageInfoNGO2 from "../assets/InfoNGO2.png";
-import Grafica from "../assets/grafica.png";
+
 
 export default function InfoNGO() {
   return (
@@ -21,7 +19,7 @@ export default function InfoNGO() {
 
           <div className="row">
             <div className="col-wide">
-              <img src={ImageInfoNGO}/>
+              <img src={'/imgs/InfoNGO.png'}/>
             </div>
 
             <div className="col-narrow">
@@ -78,7 +76,7 @@ export default function InfoNGO() {
           </div>
 
           <div className="row image2-content">
-            <img src={ImageInfoNGO2} alt="Program" />
+            <img src={'/imgs/InfoNGO2.png'} alt="Program" />
           </div>
 
           <div className="row text-impact">
@@ -89,10 +87,10 @@ export default function InfoNGO() {
 
           <div className="row charts-row">
             <div className="chart-col">
-              <img src={Grafica} alt="Chart 1" />
+              <img src={'/imgs/grafica.png'} alt="Chart 1" />
             </div>
             <div className="chart-col">
-              <img src={Grafica} alt="Chart 2" />
+              <img src={'/imgs/grafica.png'} alt="Chart 2" />
             </div>
           </div>
         </div>

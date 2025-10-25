@@ -1,14 +1,13 @@
 // https://www.w3schools.com/howto/howto_js_topnav_responsive.asp?utm_source=chatgpt.com
 import React from "react";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => (
 
   <nav className="navbar">
     <div className="navbar-logo">
-      <img src={logo}/>
+      <img src={'/imgs/logo.png'}/>
     </div>
 
     <input type="checkbox" className="nav-toggle" />
