@@ -1,25 +1,70 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../Navigation/NavbarCapital";
+import Navbar from "../Navigation/NavbarProgram";
 import "./Analytics.css";
+import LineChart from "../graphs/Line";
+import { registerCharts } from "../registerCharts";
+import DoughnutChart from "../graphs/Doughnut";
+
+registerCharts();
 
 export default function Analytics() {
   return (
     <>
       <Navbar />
       <div className="analytics-container">
-        <div className="analytics-text-content">
-          <h1 className="analytics-title">We know you care</h1>
-          <p className="analytics-paragraph">
-              We believe now is the time to revolutionize commerce globally. With this purpose in mind, we’re driven to support employees by valuing inclusion, innovation, collaboration, and wellness to ensure every person’s ability to participate in the global economy.
-          </p>
+        <div className="analytics-header">
+          <h1 className="analytics-main-title">Analytics</h1>
+          <div className="total-donated-box">
+            <span className="total-label">Total Donated</span>
+            <span className="total-amount">$ 20,439.44</span>
+          </div>
         </div>
 
-        <div className="analytics-image-content">
-          <div className="analytics-buttons">
-            <Link to="/InfoNGO"><button>Join the Program</button></Link>
+        <div className="stats-grid">
+          <div className="stat-card">
+            <h3>Totals Donations Given</h3>
+            <p className="stat-number">50</p>
           </div>
-          <img className = "analytics-image" src={'/imgs/HomePageImage.png'} width="100%" height="100%"></img>
+          <div className="stat-card">
+            <h3>AVG Donation per NGO</h3>
+            <p className="stat-number">$ 5,320.30</p>
+          </div>
+          <div className="stat-card">
+            <h3>Impact per $1000</h3>
+            <p className="stat-number">$23</p>
+          </div>
+          <div className="stat-card">
+            <h3>Number of NGOs supported</h3>
+            <p className="stat-number">34</p>
+          </div>
+        </div>
+
+        <div className="charts-grid">
+          <div className="chart-section">
+            <h3>Donation Growth (month, year)</h3>
+            <div className="graph-container">
+
+                <LineChart />
+
+              </div>
+          </div>
+          <div className="chart-section">
+            <h3>Partnership Duration</h3>
+              <div className="graph-container">
+
+                <LineChart />
+
+              </div>
+            {/* <img src="/imgs/partnership-duration.png" alt="Partnership Duration Chart" /> */}
+          </div>
+          <div className="chart-section">
+            <h3>Top Impact Areas</h3>
+            <div className="graph-container">
+
+                <DoughnutChart />
+
+              </div>
+          </div>
         </div>
       </div>
     </>
