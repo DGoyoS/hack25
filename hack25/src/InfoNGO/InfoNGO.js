@@ -31,31 +31,31 @@ export default function InfoNGO() {
                   <li>
                     <span className="numberData">50%</span>
                     <span className="infoData">
-                      De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
                     </span>
                   </li>
                   <li>
                     <span className="numberData">4.5k</span>
                     <span className="infoData">
-                      De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
                     </span>
                   </li>
                   <li>
                     <span className="numberData">582</span>
                     <span className="infoData">
-                      De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
                     </span>
                   </li>
                   <li>
                     <span className="numberData">20</span>
                     <span className="infoData">
-                      De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
                     </span>
                   </li>
                   <li>
                     <span className="numberData">5%</span>
                     <span className="infoData">
-                      De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
                     </span>
                   </li>
                 </ul>

@@ -2,17 +2,17 @@
   {
     "img": "/imgs/img1.jpg",
     "tags": ["Community", "Education"],
-    "name": "Hola Martha Learn Together"
+    "name": "After School Program"
   },
   {
     "img": "/imgs/img2.jpg",
     "tags": ["Hunger", "Humanitarian"],
-    "name": "OMS, more like, OMG"
+    "name": "Food bank initiative"
   },
   {
     "img": "/imgs/img3.jpg",
     "tags": ["Infrastructure", "Sustainability"],
-    "name": "Angie besties with Olive R"
+    "name": "Reforestation Project"
   },
   {
     "img": "/imgs/img4.jpg",
@@ -22,11 +22,11 @@
   {
     "img": "/imgs/img5.jpg",
     "tags": ["Education", "Infrastructure"],
-    "name": "Ya es json"
+    "name": "Tech for All"
   },
   {
     "img": "/imgs/img6.jpg",
     "tags": ["Sustainability", "Hunger"],
-    "name": "OMS Learn Together"
+    "name": "Clean Water Access"
   }
 ]
