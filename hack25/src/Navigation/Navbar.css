@@ -1,3 +1,12 @@
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar-logo img {
+  height: 70px !important;
+  width: 100px !important;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -5,13 +14,11 @@
   padding: .5rem 1rem;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,.1);
-  font-family: 'Josefin Sans', sans-serif;
-  position: relative;
-  position: fixed;        /* 🔥 La saca del flujo y la fija arriba */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;          /* 🔝 Encima del contenido */
+  z-index: 1000;
 
 }
 

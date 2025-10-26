@@ -7,6 +7,7 @@ export default function HomePageONG() {
   return (
     <>
       <Navbar />
+      <div className="spacer"></div>
       <div className="home-container">
         <div className="home-text-content">
           <h1 className="home-title">We know you care</h1>
