@@ -6,6 +6,10 @@ import RegisterNGO from "./Register/RegisterNGO";
 import Login from "./Login/Login";
 import RegisterDonor from "./Register/RegisterDonor";
 import SelectPage from "./Select/Select";
+import DonatePage from "./Donate/Donate";
+import TransactionPage from "./Transactions/Transaction";
+
+
 import Analytics from "./Analytics/Analytics";
 import Transactions from "./Transactions/Transactions";
 import PageCauses from "./PageCauses/PageCauses";
@@ -23,6 +27,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/select" element={<SelectPage />} />
         <Route path="/causes" element={<PageCauses />} />
+        <Route path="/donate" element={<DonatePage />} />
+        <Route path="/transaction" element={<TransactionPage />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/transactions" element={<Transactions />} />
         <Route path="/news" element={<News />} />
