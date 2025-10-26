@@ -26,7 +26,7 @@ function App() {
         <Route path="/select" element={<SelectPage />} />
         <Route path="/causes" element={<PageCauses />} />
         <Route path="/analytics" element={<Analytics />} />
-        <Route path="/account-details" element={<AccountDetails />} />
+        <Route path="/account" element={<AccountDetails />} />
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/transaction" element={<TransactionPage />} />
         <Route path="/news" element={<News />} />

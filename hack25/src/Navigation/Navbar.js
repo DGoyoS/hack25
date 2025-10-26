@@ -18,12 +18,12 @@ const Navbar = () => (
 
     <div className="nav-panel">
       <ul className="nav-links">
-        <li><a href="/creditcards">Credit Cards</a></li>
-        <li><a href="/checkings">Checkings & Savings</a></li>
-        <li><a href="/auto">Auto</a></li>
-        <li><a href="/business">Business</a></li>
-        <li><a href="/commerical">Commercial</a></li>
-        <li><a href="/benefits">Benefits & Tools</a></li>
+        <li><a style={{ cursor: "pointer" }}>Credit Cards</a></li>
+        <li><a style={{ cursor: "pointer" }}>Checkings & Savings</a></li>
+        <li><a style={{ cursor: "pointer" }}>Auto</a></li>
+        <li><a style={{ cursor: "pointer" }}>Business</a></li>
+        <li><a style={{ cursor: "pointer" }}>Commercial</a></li>
+        <li><a style={{ cursor: "pointer" }}>Benefits & Tools</a></li>
       </ul>
 
       <div className="navbar-left">
