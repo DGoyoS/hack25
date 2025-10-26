@@ -1,41 +1,73 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Login.css';
+import users from "../users.json";
+import { useState } from "react";
 import Navbar from "../Navigation/NavbarCapital";
 
 export default function Login() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Buscar usuario con las credenciales dadas
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (!user) {
+      alert("Invalid email or password");
+      return;
+    }
+
+    // Redirigir según el valor de "money"
+    if (user.money === "1") {
+      navigate("/causes");  // Ruta si tiene dinero
+    } else {
+      navigate("/");  // Ruta si no tiene dinero
+    }
+  };
+
+
   return (
     <>
       <Navbar />
-      <div class="container">
-        <div class="left-section">
+      <div className="container">
+        <div className="left-section">
           <h1>Non Profit Care <br /> Program</h1>
 
-          <form id="loginForm">
-            <label for="accountNumber">Account Number</label>
+          <form id="loginForm" onSubmit={handleSubmit}>
+            <label htmlFor="accountNumber">Email</label>
             <input
               type="text"
               id="accountNumber"
-              placeholder="A2489349 S92329 39220"
+              placeholder="donor@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
 
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
               placeholder="*******************"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <small><a href="#">Forgot your password or account number?</a></small>
 
-            <button type="submit">Login</button>
+            <button type="submit">Log in</button>
             <small>
-              Don't have an account? <a href="#"></a>
-              <Link to="/select">Join our program</Link>
+              Don't have an account? <Link to="/select">Join our program</Link>
             </small>
           </form>
         </div>
 
-        <div class="right-section">
-          <img src={'/imgs/office.png'} alt="Wind turbine field"/>
+        <div className="right-section">
+          <img src={'/imgs/office.png'} alt="Office"/>
         </div>
       </div>
     </>

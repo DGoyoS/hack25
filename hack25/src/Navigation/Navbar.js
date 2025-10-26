@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => (
 
   <nav className="navbar">
-    <div className="navbar-logo">
-      <img src={'/imgs/logo.png'}/>
-    </div>
+    <Link to="/" className="navbar-logo">
+      <img src="/imgs/logoCapOne.png" alt="Capital One"/>
+    </Link>
+    
 
     <input type="checkbox" className="nav-toggle" />
     <label htmlFor="nav-toggle" className="hamburger">
