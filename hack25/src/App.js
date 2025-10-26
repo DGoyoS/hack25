@@ -9,7 +9,6 @@ import SelectPage from "./Select/Select";
 import Analytics from "./Analytics/Analytics";
 import DonatePage from "./Donate/Donate";
 import TransactionPage from "./Transaction/Transaction";
-import Transactions from "./Transaction/Transaction";
 import PageCauses from "./PageCauses/PageCauses";
 import AccountDetails from "./AccountDetails/AccountDetails";
 import News from "./News/News";
@@ -30,7 +29,6 @@ function App() {
         <Route path="/account" element={<AccountDetails />} />
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/transaction" element={<TransactionPage />} />
-        <Route path="/analytics" element={<Analytics />} />
         <Route path="/news" element={<News />} />
       </Routes>
     </div>
