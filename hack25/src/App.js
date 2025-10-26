@@ -9,6 +9,7 @@ import SelectPage from "./Select/Select";
 import Analytics from "./Analytics/Analytics";
 import Transactions from "./Transactions/Transactions";
 import PageCauses from "./PageCauses/PageCauses";
+import News from "./News/News";
 
 
 function App() {
