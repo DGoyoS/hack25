@@ -1,33 +1,37 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./HomePage/HomePageONG";
-import Page1 from "./Page1";
 import InfoNGO from "./InfoNGO/InfoNGO";
 import RegisterNGO from "./Register/RegisterNGO";
-import LoginNGO from "./Login/LoginNGO";
-import LoginDonor from "./Login/LoginDonor";
+import Login from "./Login/Login";
 import RegisterDonor from "./Register/RegisterDonor";
 import SelectPage from "./Select/Select";
 import DonatePage from "./Donate/Donate";
 import TransactionPage from "./Transactions/Transaction";
 
 
+import Analytics from "./Analytics/Analytics";
+import Transactions from "./Transactions/Transactions";
 import PageCauses from "./PageCauses/PageCauses";
+import News from "./News/News";
+
+
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/page1" element={<Page1 />} />
         <Route path="/InfoNGO" element={<InfoNGO />} />
         <Route path="/register-non-profit" element={<RegisterNGO />} />
         <Route path="/register" element={<RegisterDonor />} />
-        <Route path="/login-non-profit" element={<LoginNGO />} />
-        <Route path="/login" element={<LoginDonor />} />
-        <Route path="/selection" element={<SelectPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/select" element={<SelectPage />} />
         <Route path="/causes" element={<PageCauses />} />
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/transaction" element={<TransactionPage />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/transactions" element={<Transactions />} />
+        <Route path="/news" element={<News />} />
       </Routes>
     </div>
   );

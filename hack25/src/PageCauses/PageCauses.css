@@ -1,3 +1,11 @@
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.spacerCauses {
+  height: 40px;
+} 
+
 /* 🔹 NAVBAR */
 .navbar {
   display: flex;
@@ -54,6 +62,7 @@
 .page-title {
   text-align: center;
   margin-top: 10px;
+  padding-top: 5%;
 }
 
 .page-title h1 {
@@ -147,7 +156,6 @@
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
 }
 
 /* 🔹 TAGS */

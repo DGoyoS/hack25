@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import causesData from "../causes.json";
 import "./PageCauses.css"; 
+import Navbar from "../Navigation/NavbarLogged";
 
 export default function PageCauses() {
   document.body.style.backgroundColor = '#F9FDFF';
@@ -53,30 +54,8 @@ export default function PageCauses() {
 
   return (
     <>
-      {/* 🔹 NAVBAR */}
-      <div className="navbar">
-        <Link to="/" className="navbar-logo">
-          <img src="/imgs/logoCapOne.png" alt="Capital One" />
-        </Link>
-
-        <div className="navbar-links">
-          {navItems.map((item) => {
-            const isActive = location.pathname === item.path;
-            return (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`navbar-item ${isActive ? "active" : ""}`}
-              >
-                {item.name}
-              </Link>
-            );
-          })}
-        </div>
-
-        <button className="account-btn">Account</button>
-      </div>
-
+      <Navbar />
+      <div className="spacerCauses"></div>
       {/* 🔹 TITLE */}
       <div className="page-title">
         <h1>Choose your cause</h1>
