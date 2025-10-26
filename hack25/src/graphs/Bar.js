@@ -1,9 +1,9 @@
-import { Line } from "react-chartjs-2"
+import { Bar } from "react-chartjs-2"
 import { registerCharts } from "../registerCharts"
 
 registerCharts() 
 
-const LineChart = () => {
+const BarChart = () => {
   const options = {
     responsive: true,
     plugins: {
@@ -18,7 +18,7 @@ const LineChart = () => {
       },
       title: {
         display: false,
-        text: "Donation Growth Over Time",
+        text: "Partnership Duration",
         font: {
           family: 'Josefin Sans, sans-serif',
           size: 18,
@@ -44,32 +44,38 @@ const LineChart = () => {
     }
   };
 
-  const labels = ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const labels = ["Amy Joe", "Jana Saldis", "Juan Chan", "Luis Evans", "Michelle Rios", "Charlotte Alan", "Chris Morzan", "Jack Edwards", "Tia Campbell"];
 
-  const donations2025 = [650, 700, 900, 850, 800, 900, 950, 1100, 1200, null, null];
-  const donations2024 = [600, 750, 850, 900, 850, 950, 1000, 900, 800, 750, 850];
+  const partnershipDuration = [8, 7, 6, 5, 4, 3, 2, 1, 0.5];
 
   const data = {
     labels,
     datasets: [
       {
-        label: "2025",
-        data: donations2025,
-        borderColor: " #0f71adff",
-        backgroundColor: "  #004977",
-        tension: 0.4
-      },
-      {
-        label: "2024",
-        data: donations2024,
-        borderColor: "rgb(0, 0, 0)",
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        tension: 0.4
+        label: "Months",
+        data: partnershipDuration,
+        backgroundColor: [
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+          " #004977",
+        ],
+        borderColor: " #004977",
+        borderWidth: 1,
       },
     ],
   };
 
-  return <Line options={options} data={data} />;
+  return <Bar options={options} data={data} />;
 };
 
-export default LineChart;
+export default BarChart;
+

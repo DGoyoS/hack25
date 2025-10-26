@@ -1,108 +1,68 @@
-import { Doughnut } from "react-chartjs-2"
-import { registerCharts } from "../registerCharts"
+import React from 'react';
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
 
-registerCharts() 
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutChart = () => {
-
-  const labels = ["January", "February", "March", "April", "May", "June", "July"]
-
-  const dataValues = [100, 50, 80, 60, 70, 40, 90]
-
-
-
-const data = {
-
-    labels,
-
-    datasets: [
-
-      {
-
-        data: dataValues,
-
-        backgroundColor: [
-
-          "rgba(255, 99, 132)",
-
-          "rgba(53, 162, 235)",
-
-          "rgba(255, 206, 86)",
-
-          "rgba(75, 192, 192)",
-
-          "rgba(153, 102, 255)",
-
-          "rgba(255, 159, 64)",
-
-          "rgba(201, 203, 207)",
-
-        ],
-
-        borderColor: [
-
-          "rgb(255, 99, 132)",
-
-          "rgb(53, 162, 235)",
-
-          "rgb(255, 206, 86)",
-
-          "rgb(75, 192, 192)",
-
-          "rgb(153, 102, 255)",
-
-          "rgb(255, 159, 64)",
-
-          "rgb(201, 203, 207)",
-
-        ],
-
-        borderWidth: 1,
-
-      },
-
-    ],
-
-  }
-
-
-
-const options = {
-
+  const options = {
     responsive: true,
-
     maintainAspectRatio: true,
-
     aspectRatio: 2,
-
     plugins: {
-
       legend: {
-
         position: "top",
-
+        labels: {
+          font: {
+            family: 'Josefin Sans, sans-serif',
+            size: 14
+          }
+        }
       },
-
       title: {
-
-        display: true,
-
-        text: "Doughnut Chart: Monthly Sales",
-
+        display: false,
+        text: "Top Impact Areas",
+        font: {
+          family: 'Josefin Sans, sans-serif',
+          size: 18,
+          weight: 600
+        }
       },
-
     },
+  };
 
-  }
+  const labels = ["Furniture", "Office Supplies", "Technology"];
 
+  const dataValues = [25, 53, 22];
 
+  const data = {
+    labels,
+    datasets: [
+      {
+        data: dataValues,
+        backgroundColor: [
+          "rgba(181, 33, 65, 0.8)",
+          "rgba(102, 55, 194, 0.8)",
+          "#004977",
+        ],
+        borderColor: [
+          "rgb(255, 99, 132)",
+          "rgba(107, 55, 211, 1)",
+          "#004977",
+        ],
+        borderWidth: 2,
+      },
+    ],
+  };
 
-return <Doughnut data={data} options={options} />
+  return <Doughnut data={data} options={options} />;
+};
 
-}
-
-
-
-export default DoughnutChart
+export default DoughnutChart;
 
 
