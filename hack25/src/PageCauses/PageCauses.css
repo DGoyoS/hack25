@@ -2,6 +2,10 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.spacerCauses {
+  height: 40px;
+} 
+
 /* 🔹 NAVBAR */
 .navbar {
   display: flex;

@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import './Register.css';
-import Navbar from "../Navigation/NavbarCapital";
+import Navbar from "../Navigation/Navbar";
 import { useState } from "react";
 
 export default function RegisterDonor() {
-    const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const navigate = useNavigate();

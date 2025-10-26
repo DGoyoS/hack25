@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navigation/NavbarProgram";
+import Navbar from "../Navigation/NavbarLogged";
 import "./Analytics.css";
 import LineChart from "../graphs/Line";
 import { registerCharts } from "../registerCharts";

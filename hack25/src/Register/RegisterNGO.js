@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import './Register.css';
-import Navbar from "../Navigation/NavbarCapital";
+import Navbar from "../Navigation/Navbar";
 import { useState } from "react";
 
 export default function RegisterNGO() {
@@ -73,7 +73,7 @@ export default function RegisterNGO() {
 
             <button type="submit">Join the Community</button>
             <small>
-              Already part of the program? <Link to="/">Log in</Link>
+              Already part of the program? <Link to="/login">Log in</Link>
             </small>
           </form>
         </div>

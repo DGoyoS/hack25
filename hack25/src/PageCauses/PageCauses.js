@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import causesData from "../causes.json";
 import "./PageCauses.css"; 
-import Navbar from "../Navigation/NavbarProgram";
+import Navbar from "../Navigation/NavbarLogged";
 
 export default function PageCauses() {
   document.body.style.backgroundColor = '#F9FDFF';
@@ -55,7 +55,7 @@ export default function PageCauses() {
   return (
     <>
       <Navbar />
-      
+      <div className="spacerCauses"></div>
       {/* 🔹 TITLE */}
       <div className="page-title">
         <h1>Choose your cause</h1>
