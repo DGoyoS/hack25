@@ -24,7 +24,7 @@ function App() {
         <Route path="/causes" element={<PageCauses />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/transactions" element={<Transactions />} />
-        <Route path="/news" element={<Page1 />} />
+        <Route path="/news" element={<News />} />
       </Routes>
     </div>
   );
