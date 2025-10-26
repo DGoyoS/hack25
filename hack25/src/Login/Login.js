@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import './Login.css';
 import users from "../users.json";
 import { useState } from "react";
-import Navbar from "../Navigation/NavbarCapital";
+import Navbar from "../Navigation/Navbar";
 
 export default function Login() {
 

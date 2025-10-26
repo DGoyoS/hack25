@@ -1,58 +1,91 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Register.css';
-import Navbar from "../Navigation/NavbarCapital";
+import Navbar from "../Navigation/Navbar";
+import { useState } from "react";
 
 export default function RegisterDonor() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email || !password || !confirm) {
+      alert("Please fill out all fields.");
+      return;
+    }
+    if (password !== confirm) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    // Obtener usuarios previos del localStorage
+    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Crear el nuevo usuario (money = 1 -> donor)
+    const newUser = { email, password, money: "1" };
+
+    // Guardar en localStorage
+    localStorage.setItem("users", JSON.stringify([...storedUsers, newUser]));
+
+    alert("Registration successful!");
+    navigate("/causes");
+  };
+
+
   return (
     <>
       <Navbar />
-      <div class="container">
-        <div class="left-section">
+      <div className="container">
+        <div className="left-section">
           <h1>Non Profit Care <br /> Program</h1>
 
-          <form id="loginForm">
-            <label for="accountName">Account Name</label>
-            <input
-              type="text"
-              id="accountName"
-              placeholder="Organization Name"
-            />
+          <form id="loginForm" onSubmit={handleSubmit}>
+            <label htmlFor="accountName">Account Name</label>
+            <input type="text" id="accountName" placeholder="Organization Name" />
 
-            <label for="accountNumber">Account Number</label>
+            <label htmlFor="accountNumber">Email</label>
             <input
               type="text"
               id="accountNumber"
-              placeholder="A2489349 S92329 39220"
+              placeholder="donor@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <small>
               Don't have an account? <a href="https://www.capitalone.com/commercial/industry-expertise/non-profit-organizations/" target="_blank">Create a bank account with Capital One</a>
             </small>
 
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
               placeholder="*******************"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <label for="password">Confirm Password</label>
+            <label htmlFor="confirm">Confirm Password</label>
             <input
               type="password"
-              id="password"
+              id="confirm"
               placeholder="*******************"
+              value={confirm}
+              onChange={(e) => setConfirm(e.target.value)}
             />
 
             <button type="submit">Join the Community</button>
             <small>
-              Already part of the program? <a href="#"></a>
-              <Link to="/login">Login</Link>
+              Already part of the program? <Link to="/login">Log in</Link>
             </small>
           </form>
         </div>
 
-        <div class="right-section">
-          <img src={'/imgs/office.png'} alt="Wind turbine field"/>
+        <div className="right-section">
+          <img src={"/imgs/office.png"} alt="Wind turbine field" />
         </div>
       </div>
     </>
-  )
+  );
 }

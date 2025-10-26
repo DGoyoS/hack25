@@ -3,14 +3,13 @@
 }
 
 .info-container {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
-  padding: 16px 0;
+  padding: 2.5rem 0;
 }
 
 .info-table {
   display: grid;
-  gap: 24px;           
 }
 
 .MainTitle {
@@ -18,20 +17,22 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: bold;
-  font-size: 6em;
-  margin-bottom: 0;
+  font-size: 4em;
 }
 
 .row {
   display: grid;
-  grid-template-columns: 70% 30%; 
+  grid-template-columns: 55% 45%; 
   gap: 16px;
 }
 
-.col-wide h1 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 4rem);
+.row-tag-donate {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 16px;
+  align-items: center;
 }
+
 
 .col-wide img {
   width: 100%;
@@ -46,9 +47,15 @@
   height: 100%;
   min-height: 0;      
 }
+
 .highlights {
-  margin: 0 0 12px 0;
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 2.5em;
+  margin-bottom: 0.8rem;
+  margin-left: 1.5rem;
 }
 
 .table-highlights {
@@ -59,43 +66,59 @@
   flex-direction: column;
   gap: 8px;
   flex: 1;               
-  min-height: 0;
 }
+
+
 .table-highlights > li {
   display: grid;
-  grid-template-columns: 24% 1fr;  
-  align-items: start;
-  padding: 10px 12px;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  background: #fff;
+    grid-template-columns: 30%     70%;
   flex: 1;                          
-  min-height: 0;
-  overflow: auto;
-}
-.numberData {
-  font-weight: 700;
-  text-align: right;
-  font-size: 1.5em;
 
+}
+
+.numberData {
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 2.3rem;
+  display: flex;                  
+  justify-content: center;       
+  align-items: center;            
+  text-align: center;   
+  margin-right: 0.5rem;        
 }
 
 .infoData {
-  line-height: 1.35;
-    font-size: 1.2em;
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-size: 1.5rem;
+  display: flex;                  
+  justify-content: center;        
+  align-items: center;            
+  text-align: left;   
+            
 }
 
-.tagName { 
+.tagName{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.tagNametext { 
   padding-top: 0;
+      font-family: 'Josefin Sans', sans-serif;
+    font-optical-sizing: auto;
   background: #ffffff; 
   color: black; 
   border-radius: 12px; 
   padding: .5rem .9rem; 
   font-weight: 400;
   border: 2px solid black;
-  width: 12%;
   align-items: center;
 }
+
 .tagParagraph {
     font-family: 'Josefin Sans', sans-serif;
     font-optical-sizing: auto;
@@ -112,7 +135,8 @@
 }
 
 .donate-button {
-  display: block;         
+font-family: 'Josefin Sans', sans-serif;
+font-optical-sizing: auto;
   width: 100%;             
   background: #004977;
   color: #fff;
@@ -125,9 +149,16 @@
   box-sizing: border-box; 
 }
 
+.donate-button:hover {
+  background: #ffffff;   
+  color: #004977;         
+  border: 2px solid #004977; 
+}
+
 .image2-content,
 .text-impact {
   grid-template-columns: 1fr; 
+  margin-top: 2rem;
 }
 
 .image2-content img {

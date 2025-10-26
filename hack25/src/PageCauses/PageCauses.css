@@ -2,6 +2,10 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.spacerCauses {
+  height: 40px;
+} 
+
 /* 🔹 NAVBAR */
 .navbar {
   display: flex;
@@ -152,7 +156,6 @@
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 10px;
-  font-family: "Poppins", sans-serif;
 }
 
 /* 🔹 TAGS */

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Navigation/NavbarProgram";
+import Navbar from "../Navigation/NavbarLogged";
 import "./InfoNGO.css";
 
 
@@ -34,25 +34,25 @@ export default function InfoNGO() {
                     </span>
                   </li>
                   <li>
-                    <span className="numberData">50%</span>
+                    <span className="numberData">4.5k</span>
                     <span className="infoData">
                       De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
                     </span>
                   </li>
                   <li>
-                    <span className="numberData">50%</span>
+                    <span className="numberData">582</span>
                     <span className="infoData">
                       De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
                     </span>
                   </li>
                   <li>
-                    <span className="numberData">50%</span>
+                    <span className="numberData">20</span>
                     <span className="infoData">
                       De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
                     </span>
                   </li>
                   <li>
-                    <span className="numberData">50%</span>
+                    <span className="numberData">5%</span>
                     <span className="infoData">
                       De dfsdjf saflkasfjl asdlkdlkad asdlkasdklsdjads kladsjdsk asdlkadslk
                     </span>
@@ -62,9 +62,11 @@ export default function InfoNGO() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row-tag-donate">
             <div className="col-wide">
-              <h3 className="tagName">Community</h3>
+             <div className="tagName">
+                 <h3 className="tagNametext">Community</h3>
+              </div>
               <p className="tagParagraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.              </p>
             </div>

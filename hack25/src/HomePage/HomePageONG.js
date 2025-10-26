@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Navigation/NavbarCapital";
+import Navbar from "../Navigation/Navbar";
 import "./HomePageONG.css";
 
 export default function HomePageONG() {
