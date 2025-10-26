@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./HomePage/HomePageONG";
-import Page1 from "./Page1";
 import InfoNGO from "./InfoNGO/InfoNGO";
 import RegisterNGO from "./Register/RegisterNGO";
 import Login from "./Login/Login";
@@ -16,7 +15,6 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/page1" element={<Page1 />} />
         <Route path="/InfoNGO" element={<InfoNGO />} />
         <Route path="/register-non-profit" element={<RegisterNGO />} />
         <Route path="/register" element={<RegisterDonor />} />
