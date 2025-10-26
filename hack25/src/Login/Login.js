@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import './Login.css';
-import Navbar from "../Navigation/Navbar";
 import users from "../users.json";
 import { useState } from "react";
+import Navbar from "../Navigation/NavbarCapital";
 
 export default function Login() {
 
