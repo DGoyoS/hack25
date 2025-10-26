@@ -8,6 +8,7 @@ export default function InfoNGO() {
   return (
     <>
       <Navbar />
+      <div className="InfoSpacer"></div>
       <div className="info-container">
         <div className="info-table">
           <div className="row">
