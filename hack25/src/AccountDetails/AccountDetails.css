@@ -1,108 +1,135 @@
+/* Base reset & font */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Josefin Sans', sans-serif;
-  font-optical-sizing: auto;
 }
 
 body, html {
   height: 100%;
-  background-color: #f9fdff;
-  color: #111;
+  background-color: #f9f9f9;
+  color: #00173A;
 }
 
-/* Layout */
+/* Container layout similar to donate-container */
 .account-container {
+  width: 85%;
+  margin: 0 auto;
   display: flex;
-  height: 100vh;
-  
 }
 
-/* LEFT SIDE */
+/* LEFT SIDE — text and details */
 .account-left {
-  flex: 1;
-  /* padding: 60px 80px; */
+  flex: 3;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1); */
+  background-color: #f9f9f9;
 }
 
 .account-left h1 {
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 4em;
   margin-bottom: 2rem;
+  color: #00173A;
+}
+
+.page-title{
+    text-align: left;
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 400px;
+  gap: 1.8rem;
+  max-width: 500px;
 }
 
 .detail-row label {
   font-weight: 600;
-  font-optical-sizing: auto;
-  color: #003366;
+  font-size: 1.3rem;
+  /* color: #004977; */
+  margin-bottom: 0.4rem;
 }
 
 .detail-row p,
 .detail-row a {
-  margin-top: 5px;
-  font-optical-sizing: auto;
-  color: #333;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #00173A;
   text-decoration: none;
 }
 
 .detail-row a:hover {
   text-decoration: underline;
+  color: #004977;
 }
 
-/* RIGHT SIDE */
+/* RIGHT SIDE — image + description */
 .account-right {
-  flex: 1;
+    margin-top: 5%;
+    flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+}
+
+.account-right img {
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .account-image {
-  width: 300px;
-  height: auto;
-  border-radius: 20px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-}
-
-.description{
-    font-optical-sizing: auto;
+  border-radius: 50;
+  display: block;
 }
 
 .description-title {
   font-optical-sizing: auto;
-  color: #003366;
-  font-weight: 600;
+  font-weight: 150;
+  font-style: normal;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  margin-top: 2rem;
+  color: #00173A;
 }
 
-/* RESPONSIVE */
+/* Responsive layout */
 @media (max-width: 768px) {
   .account-container {
     flex-direction: column;
+  }
+
+  .account-left,
+  .account-right {
+    flex: none;
+    width: 100%;
     height: auto;
   }
 
-  .account-left, .account-right {
-    flex: none;
-    width: 100%;
-    padding: 40px;
+  /* .account-right img {
+    height: auto;
+  } */
+
+  .account-left h1 {
+    font-size: 3em;
   }
 
-  .account-right {
-    background: none;
+  .detail-row p,
+  .detail-row a {
+    font-size: 1.2rem;
+  }
+
+  .description-title {
+    font-size: 1.5em;
   }
 }
