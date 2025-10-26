@@ -2,15 +2,15 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.HomeSpacer {
-  height: 140px;
+.spacer {
+  height: 100px;
 } 
 
-.home-container {
+.news-container {
   text-align: center;
 }
 
-.home-text-content {
+.news-text-content {
   text-align: center;
   margin: 20px auto; 
   max-width: 950px;
@@ -18,7 +18,7 @@
 
 }
 
-.home-title {
+.news-title {
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
   font-optical-sizing: auto;
@@ -28,7 +28,7 @@
   margin-bottom: 0;
 }
 
-.home-paragraph {
+.news-paragraph {
   font-family: 'Josefin Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 250;
@@ -37,27 +37,28 @@
   line-height: 1.2em;
 }
 
-.home-image-content {
+.news-image-content {
+
   position: relative;
   width: 100%;
+  max-width: 800px;
   margin: 0 auto;
-  background-size: cover;
 }
 
-.home-image {
+.news-image {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.home-buttons {
+.news-buttons {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%); 
   z-index: 1;
 }
 
-.home-buttons button {
+.news-buttons button {
   padding: 1.3rem 2rem;
   background-color: #ffffff;
   color: black;
@@ -69,7 +70,7 @@
   transition: background-color 0.3s ease;
 }
 
-.home-buttons button:hover {
+.news-buttons button:hover {
   background-color: #e5e2e2;
 }
 

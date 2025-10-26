@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import causesData from "../causes.json";
 import "./PageCauses.css"; 
+import Navbar from "../Navigation/NavbarLogged";
 
 export default function PageCauses() {
   document.body.style.backgroundColor = '#F9FDFF';
@@ -43,46 +44,18 @@ export default function PageCauses() {
   });
 
   const location = useLocation();
-  const navItems = [
-    { name: "Causes", path: "/causes" },
-    { name: "Transactions", path: "/transactions" },
-    { name: "Bills & Receipts", path: "/bills" },
-    { name: "Analytics", path: "/analytics" },
-    { name: "News", path: "/news" },
-  ];
+  const navigate = useNavigate(); 
 
   return (
     <>
-      {/* 🔹 NAVBAR */}
-      <div className="navbar">
-        <Link to="/" className="navbar-logo">
-          <img src="/imgs/logoCapOne.png" alt="Capital One" />
-        </Link>
-
-        <div className="navbar-links">
-          {navItems.map((item) => {
-            const isActive = location.pathname === item.path;
-            return (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`navbar-item ${isActive ? "active" : ""}`}
-              >
-                {item.name}
-              </Link>
-            );
-          })}
-        </div>
-
-        <button className="account-btn">Account</button>
-      </div>
-
-      {/* 🔹 TITLE */}
+      <Navbar />
+      <div className="spacerCauses"></div>
+      {/* TITLE */}
       <div className="page-title">
         <h1>Choose your cause</h1>
       </div>
 
-      {/* 🔹 SEARCH BAR */}
+      {/* SEARCH BAR */}
       <div className="search-bar">
         <input
           type="text"
@@ -92,7 +65,7 @@ export default function PageCauses() {
         />
       </div>
 
-      {/* 🔹 FILTER BUTTONS */}
+      {/* FILTER BUTTONS */}
       <div className="filters-container">
         {filters.map((filter) => {
           const isActive = activeFilters.includes(filter);
@@ -108,14 +81,18 @@ export default function PageCauses() {
         })}
       </div>
 
-      {/* 🔹 GRID */}
+      {/* GRID */}
       <div className="causes-grid">
         {filteredCauses.map(({ img, tags, name }, i) => (
-          <div key={i} className="cause-card">
+          <div
+            key={i}
+            className="cause-card"
+            onClick={() => navigate("/infoNGO")} // 🔹 Redirección al hacer clic
+            style={{ cursor: "pointer" }} // Opcional
+          >
             <img src={img} alt={name} className="cause-img" />
             <div className="cause-content">
               <h3>{name}</h3>
-
               <div className="cause-tags">
                 {tags.map((tag, idx) => (
                   <span key={idx} className="cause-tag">
@@ -123,10 +100,7 @@ export default function PageCauses() {
                   </span>
                 ))}
               </div>
-
-              <a className="learn-more"> {/*href="#" */}
-                Learn more →
-              </a>
+              <span className="learn-more">Learn more →</span>
             </div>
           </div>
         ))}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Navigation/NavbarCapital";
+import Navbar from "../Navigation/NavbarLogged";
 import "./InfoNGO.css";
 
 
@@ -8,6 +8,7 @@ export default function InfoNGO() {
   return (
     <>
       <Navbar />
+      <div className="InfoSpacer"></div>
       <div className="info-container">
         <div className="info-table">
           <div className="row">

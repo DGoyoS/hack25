@@ -1,13 +1,13 @@
 // https://www.w3schools.com/howto/howto_js_topnav_responsive.asp?utm_source=chatgpt.com
 import React from "react";
-import "./NavbarCapital.css";
+import "./NavbarLogged.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => (
 
   <nav className="navbar">
     <div className="navbar-logo">
-      <img src={'/imgs/logo.png'}/>
+      <img src={'/imgs/logoCapOne.png'}/>
     </div>
 
     <input type="checkbox" className="nav-toggle" />
@@ -17,16 +17,14 @@ const Navbar = () => (
 
     <div className="nav-panel">
       <ul className="nav-links">
-        <li><a href="/creditcards">Credit Cards</a></li>
-        <li><a href="/checkings">Checkings & Savings</a></li>
-        <li><a href="/auto">Auto</a></li>
-        <li><a href="/business">Business</a></li>
-        <li><a href="/commerical">Commercial</a></li>
-        <li><a href="/benefits">Benefits & Tools</a></li>
+        <li><a href="/analytics">Analytics</a></li>
+        <li><a href="/transaction">Transactions</a></li>
+        <li><a href="">News</a></li>
+
       </ul>
 
       <div className="navbar-left">
-        <Link to="/account" className="login-button">Log In</Link>
+        <Link to="/Account" className="login-button">Account</Link>
       </div>
     </div>
   </nav>
