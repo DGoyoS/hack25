@@ -36,7 +36,7 @@ const DoughnutChart = () => {
     },
   };
 
-  const labels = ["Furniture", "Office Supplies", "Technology"];
+  const labels = ["Hunger", "Humanitarian", "Sustainability"];
 
   const dataValues = [25, 53, 22];
 

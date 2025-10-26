@@ -44,9 +44,9 @@ const BarChart = () => {
     }
   };
 
-  const labels = ["Amy Joe", "Jana Saldis", "Juan Chan", "Luis Evans", "Michelle Rios", "Charlotte Alan", "Chris Morzan", "Jack Edwards", "Tia Campbell"];
+  const labels = ["Reforestation Program", "Food Bank Initiative", "Tech for All", "After School Program"];
 
-  const partnershipDuration = [8, 7, 6, 5, 4, 3, 2, 1, 0.5];
+  const partnershipDuration = [8, 7, 6, 5,];
 
   const data = {
     labels,
@@ -55,8 +55,6 @@ const BarChart = () => {
         label: "Months",
         data: partnershipDuration,
         backgroundColor: [
-          " #004977",
-          " #004977",
           " #004977",
           " #004977",
           " #004977",
@@ -78,4 +76,5 @@ const BarChart = () => {
 };
 
 export default BarChart;
+
 

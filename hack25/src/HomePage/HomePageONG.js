@@ -12,7 +12,7 @@ export default function HomePageONG() {
         <div className="home-text-content">
           <h1 className="home-title">We know you care</h1>
           <p className="home-paragraph">
-              We believe now is the time to revolutionize commerce globally. With this purpose in mind, we’re driven to support employees by valuing inclusion, innovation, collaboration, and wellness to ensure every person’s ability to participate in the global economy.
+              We believe now is the time to be part of the change. With this purpose in mind, we’re driven to support companies and non-profit organizations by valuing inclusion, innovation, collaboration, and wellness to ensure every connection is impactful.
           </p>
         </div>
 
