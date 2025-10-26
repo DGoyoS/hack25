@@ -20,7 +20,7 @@ export default function HomePageONG() {
           <div className="home-buttons">
             <Link to="/select"><button>Join the Program</button></Link>
           </div>
-          <img className="home-image" src={'/imgs/HomePageImage.png'} width="100%" height="100%"></img>
+          <img className="home-image" src={'/imgs/img3.jpg'} width="100%" height="100%"></img>
         </div>
       </div>
     </>

@@ -4,6 +4,8 @@ import "./Analytics.css";
 import LineChart from "../graphs/Line";
 import { registerCharts } from "../registerCharts";
 import DoughnutChart from "../graphs/Doughnut";
+import BarChart from "../graphs/Bar";
+
 
 registerCharts();
 
@@ -41,15 +43,15 @@ export default function Analytics() {
 
         <div className="charts-grid">
           <div className="chart-section">
-            <h3>Donation Growth (month, year)</h3>
+            <h3>Partnership Duration</h3>
             <div className="graph-container">
 
-                <LineChart />
+                <BarChart />
 
               </div>
           </div>
           <div className="chart-section">
-            <h3>Partnership Duration</h3>
+            <h3>Donation Growth</h3>
               <div className="graph-container">
 
                 <LineChart />
