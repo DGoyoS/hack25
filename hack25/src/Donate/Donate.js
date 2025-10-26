@@ -5,6 +5,7 @@ import "./Donate.css";
 
 export default function Donate() {
   const [showText, setShowText] = useState(true); 
+  const [quantity, setQuantity] = useState("");
 
   return (
     <>
@@ -25,9 +26,11 @@ export default function Donate() {
                         <div className="first_input_container">
                             <h3 className="title_quantity">Quantity</h3>
                             <input
-                                type="text"
-                                className="input_quantity"
-                                placeholder="Enter quantity..."
+                            type="text"
+                            className="input_quantity"
+                            placeholder="Enter quantity..."
+                            value={quantity}             
+                            onChange={(e) => setQuantity(e.target.value)}
                             />
                         </div>
 
@@ -51,13 +54,19 @@ export default function Donate() {
                     ) : (
 
                         <div className="thankyou-container">
-                        <h2 className="nameCompany">COMPANY NAME just donated!</h2>
+                        <h2 className="nameCompany">TEC DE MONTERREY just donated!</h2>
                         <p className="thankyou-text">
                             Your support helps us continue our mission. You'll receive a
                             confirmation email shortly.
                         </p>
                         <div className="things_centered">
-                            <h2 className="donationMoney">$ 30, 000.50</h2>
+                            <h2 className="donationMoney">
+                                ${""}
+                                {Number(quantity).toLocaleString("en-US", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2,
+                                })}
+                            </h2>
                             <img src={'/imgs/heartIcon.png'}/>
                             <h2 className="thankyou-text2">THANKS FOR BEING PART OF THE CHANGE.</h2>
                             </div>
