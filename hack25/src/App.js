@@ -9,6 +9,7 @@ import LoginDonor from "./Login/LoginDonor";
 import RegisterDonor from "./Register/RegisterDonor";
 import SelectPage from "./Select/Select";
 import DonatePage from "./Donate/Donate";
+import TransactionPage from "./Transactions/Transaction";
 
 
 import PageCauses from "./PageCauses/PageCauses";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/selection" element={<SelectPage />} />
         <Route path="/causes" element={<PageCauses />} />
         <Route path="/donate" element={<DonatePage />} />
+        <Route path="/transaction" element={<TransactionPage />} />
       </Routes>
     </div>
   );
