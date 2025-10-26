@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navigation/NavbarProgram";
-import "./HomePageONG.css";
+import "./News.css";
 
 export default function News() {
   return (
