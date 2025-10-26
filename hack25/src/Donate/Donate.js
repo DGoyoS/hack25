@@ -15,7 +15,7 @@ export default function Donate() {
       <div className="donate-container">
         
         <div className="row-left">
-            <h1 className="title_donate">OMS Learn Together</h1>
+            <h1 className="title_donate"> Sustainable Roots Foundation </h1>
                 <div className="text_all">
                     <div className="title_donate-container">
                         <p> Thank you for donating! Your contribution helps us move closer to our mission and make a difference where it truly matters. </p>
@@ -56,7 +56,7 @@ export default function Donate() {
                     ) : (
 
                         <div className="thankyou-container">
-                        <h2 className="nameCompany">TEC DE MONTERREY just donated!</h2>
+                        <h2 className="nameCompany">WindPower Solutions Mexico AC just donated!</h2>
                         <p className="thankyou-text">
                             Your support helps us continue our mission. You'll receive a
                             confirmation email shortly.

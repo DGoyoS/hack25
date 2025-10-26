@@ -33,7 +33,7 @@ export default function Analytics() {
           </div>
           <div className="stat-card">
             <h3>Impact per $1000</h3>
-            <p className="stat-number">$23</p>
+            <p className="stat-number">10 people supported</p>
           </div>
           <div className="stat-card">
             <h3>Number of NGOs supported</h3>
