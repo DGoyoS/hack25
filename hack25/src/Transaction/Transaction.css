@@ -1,3 +1,6 @@
+.TransactionSpacer {
+  height: 140px;
+}
 .transaction-container{
     width: 80%;
     margin: 20px auto;

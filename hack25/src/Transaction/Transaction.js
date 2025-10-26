@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Navigation/Navbar";
+import Navbar from "../Navigation/NavbarLogged";
 import "./Transaction.css";
 
 export default function Transaction() {
@@ -8,6 +8,7 @@ export default function Transaction() {
   return (
     <>
       <Navbar />
+      <div className="TransactionSpacer"></div>
         <div className="transaction-container">
         <h1 className='transaction-title'>Transactions</h1>
         <h3 className='date-transaction'>October 26th, 2025</h3>

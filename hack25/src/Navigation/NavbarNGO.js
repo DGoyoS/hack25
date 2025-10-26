@@ -17,9 +17,8 @@ const Navbar = () => (
 
     <div className="nav-panel">
       <ul className="nav-links">
-        <li><a href="/causes">Causes</a></li>
-        <li><a href="/transaction">Transactions</a></li>
         <li><a href="/analytics">Analytics</a></li>
+        <li><a href="/transaction">Transactions</a></li>
         <li><a href="">News</a></li>
 
       </ul>

@@ -7,11 +7,11 @@ import Login from "./Login/Login";
 import RegisterDonor from "./Register/RegisterDonor";
 import SelectPage from "./Select/Select";
 import DonatePage from "./Donate/Donate";
-import TransactionPage from "./Transactions/Transaction";
+import TransactionPage from "./Transaction/Transaction";
 
 
 import Analytics from "./Analytics/Analytics";
-import Transactions from "./Transactions/Transactions";
+import Transactions from "./Transaction/Transaction";
 import PageCauses from "./PageCauses/PageCauses";
 import News from "./News/News";
 

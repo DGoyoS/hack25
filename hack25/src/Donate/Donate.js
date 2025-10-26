@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Navigation/Navbar";
+import Navbar from "../Navigation/NavbarLogged";
 import "./Donate.css";
 
 export default function Donate() {
@@ -10,6 +10,8 @@ export default function Donate() {
   return (
     <>
       <Navbar />
+      <div className="donateSpacer"></div>
+
       <div className="donate-container">
         
         <div className="row-left">

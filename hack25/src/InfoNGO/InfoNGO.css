@@ -2,6 +2,10 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.InfoSpacer {
+  height: 80px; 
+}
+
 .info-container {
   width: 85%;
   margin: 0 auto;

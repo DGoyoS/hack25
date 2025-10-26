@@ -27,7 +27,7 @@ export default function RegisterNGO() {
     localStorage.setItem("users", JSON.stringify([...storedUsers, newUser]));
 
     alert("Registration successful!");
-    navigate("/causes");
+    navigate("/Analytics");
   };
 
 
