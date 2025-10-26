@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Navigation/NavbarCapital";
+import Navbar from "../Navigation/Navbar";
 import "./HomePageONG.css";
 
 export default function HomePageONG() {
@@ -20,7 +20,7 @@ export default function HomePageONG() {
           <div className="home-buttons">
             <Link to="/select"><button>Join the Program</button></Link>
           </div>
-          <img className="home-image" src={'/imgs/HomePageImage.png'} width="100%" height="100%"></img>
+          <img className="home-image" src={'/imgs/HomePageImage.png'}></img>
         </div>
       </div>
     </>
