@@ -1,183 +1,143 @@
 .analytics-container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
-
-.info-table {
-  display: grid;
-  gap: 24px;           
-}
-
-.MainTitle {
+  margin-top: 80px; /* space for fixed navbar */
+  padding: 2rem 4rem;
   font-family: 'Josefin Sans', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: bold;
-  font-size: 6em;
-  margin-bottom: 0;
+  background: #fff;
+  min-height: calc(100vh - 80px);
 }
 
-.row {
-  display: grid;
-  grid-template-columns: 70% 30%; 
-  gap: 16px;
+.analytics-container * {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.col-wide h1 {
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.analytics-main-title {
+  font-size: 4rem;
+  font-weight: 700;
   margin: 0;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.col-wide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   
-  display: block;
-}
-
-.highlights-container {
+.total-donated-box {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 0;      
-}
-.highlights {
-  margin: 0 0 12px 0;
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
-}
-
-.table-highlights {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;         
-  flex-direction: column;
-  gap: 8px;
-  flex: 1;               
-  min-height: 0;
-}
-.table-highlights > li {
-  display: grid;
-  grid-template-columns: 24% 1fr;  
-  align-items: start;
-  padding: 10px 12px;
-  border: 1px solid #eee;
-  border-radius: 8px;
+  align-items: flex-end;
+  padding: 1.5rem 3rem;
+  border: 3px solid #000;
+  border-radius: 50px;
   background: #fff;
-  flex: 1;                          
-  min-height: 0;
-  overflow: auto;
-}
-.numberData {
-  font-weight: 700;
-  text-align: right;
-  font-size: 1.5em;
-
 }
 
-.infoData {
-  line-height: 1.35;
-    font-size: 1.2em;
-}
-
-.tagName { 
-  padding-top: 0;
-  background: #ffffff; 
-  color: black; 
-  border-radius: 12px; 
-  padding: .5rem .9rem; 
-  font-weight: 400;
-  border: 2px solid black;
-  width: 12%;
-  align-items: center;
-}
-.tagParagraph {
-    font-family: 'Josefin Sans', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 150;
-    font-style: normal;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    margin-top: 0.5rem;
-}
-
-.div-donate-button { 
-    display: flex; 
-    align-items: center; 
-}
-
-.donate-button {
-  display: block;         
-  width: 100%;             
-  background: #004977;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 20px;
-  padding: 1.5rem 1.9rem;
-  font-weight: 450;
-  font-size: 3em;
-  text-align: center;      
-  box-sizing: border-box; 
-}
-
-.image2-content,
-.text-impact {
-  grid-template-columns: 1fr; 
-}
-
-.image2-content img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 0rem;
-}
-.text-impact h3 { 
-   font-family: 'Josefin Sans', sans-serif;
-  font-optical-sizing: auto;
+.total-label {
+  font-size: 1.5rem;
   font-weight: 600;
-  font-style: bold;
-  font-size: 2em;
-  margin-bottom: 0;
- }
-
-.text-impact p  { 
-    font-family: 'Josefin Sans', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 150;
-    font-style: normal;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.charts-row {
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+.total-amount {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
 }
-.chart-col img {
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  padding: 2rem;
+  border: 3px solid #000;
+  border-radius: 25px;
+  background: #fff;
+  text-align: left;
+}
+
+.stat-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.4;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.chart-section {
+  padding: 1.5rem;
+}
+
+.chart-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.chart-section img {
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 12px;
+  object-fit: contain;
 }
 
-@media (max-width: 1024px) {
-  .row {
-    grid-template-columns: 60% 40%;
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 768px) {
-  .row {
-    grid-template-columns: 1fr; 
+  .analytics-container {
+    padding: 1rem 2rem;
   }
-  .charts-row {
+
+  .analytics-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .analytics-main-title {
+    font-size: 2.5rem;
+  }
+
+  .total-donated-box {
+    padding: 1rem 2rem;
+  }
+
+  .total-amount {
+    font-size: 2rem;
+  }
+
+  .stats-grid {
     grid-template-columns: 1fr;
   }
 
-  .col-wide img {
-    height: auto;
-    object-fit: cover;
+  .stat-number {
+    font-size: 2.5rem;
   }
 }
