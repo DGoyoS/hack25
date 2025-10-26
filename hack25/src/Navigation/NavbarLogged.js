@@ -20,7 +20,7 @@ const Navbar = () => (
         <li><a href="/causes">Causes</a></li>
         <li><a href="/transaction">Transactions</a></li>
         <li><a href="/analytics">Analytics</a></li>
-        <li><a href="">News</a></li>
+        <li><a style={{ cursor: "pointer" }}>News</a></li>
 
       </ul>
 

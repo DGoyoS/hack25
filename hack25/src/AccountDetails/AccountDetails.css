@@ -6,6 +6,9 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.accountSpacer {
+  height: 80px;
+}
 body, html {
   height: 100%;
   background-color: #f9f9f9;
@@ -26,7 +29,6 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f9f9f9;
 }
 
 .account-left h1 {

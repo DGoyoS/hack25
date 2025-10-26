@@ -30,7 +30,7 @@ export default function Transaction() {
                     <div className="value-transaction">Lorem Ipsum Time</div>
 
                     <div className="label-transaction">NGO Tax ID</div>
-                    <div className="value-transaction">Status (in progress)</div>
+                    <div className="value-transaction">Status (Finished)</div>
 
                     <div className="label-transaction">Paid with</div>
                     <div className="value-transaction">Company Tax ID: Lorem Ipsum Time</div>
@@ -42,7 +42,12 @@ export default function Transaction() {
                     <div className="value-transaction">Lorem Ipsum Time</div>
 
                     <div className="label-transaction">Invoice</div>
-                    <div className="value-transaction">Lorem Ipsum Time</div>
+                    <div className="detail-row">
+                        <a style={{cursor: "pointer", fontSize: "0.9em"}} target="_blank" rel="noreferrer">
+                            <div>Tax_Certificate.pdf</div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -66,7 +71,7 @@ export default function Transaction() {
                     <div className="value-transaction">Lorem Ipsum Time</div>
 
                     <div className="label-transaction">NGO Tax ID</div>
-                    <div className="value-transaction">Status (in progress)</div>
+                    <div className="value-transaction">Status (Finished)</div>
 
                     <div className="label-transaction">Paid with</div>
                     <div className="value-transaction">Company Tax ID: Lorem Ipsum Time</div>
@@ -78,7 +83,11 @@ export default function Transaction() {
                     <div className="value-transaction">Lorem Ipsum Time</div>
 
                     <div className="label-transaction">Invoice</div>
-                    <div className="value-transaction">Lorem Ipsum Time</div>
+                    <div className="detail-row">
+                        <a style={{cursor: "pointer", fontSize: "0.9em"}} target="_blank" rel="noreferrer">
+                            <div>Tax_Certificate.pdf</div>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -103,7 +112,7 @@ export default function Transaction() {
                     <div className="value-transaction">Lorem Ipsum Time</div>
 
                     <div className="label-transaction">NGO Tax ID</div>
-                    <div className="value-transaction">Status (in progress)</div>
+                    <div className="value-transaction">Status (Finished)</div>
 
                     <div className="label-transaction">Paid with</div>
                     <div className="value-transaction">Company Tax ID: Lorem Ipsum Time</div>
@@ -115,7 +124,11 @@ export default function Transaction() {
                     <div className="value-transaction">Lorem Ipsum Time</div>
 
                     <div className="label-transaction">Invoice</div>
-                    <div className="value-transaction">Lorem Ipsum Time</div>
+                    <div className="detail-row">
+                        <a style={{cursor: "pointer", fontSize: "0.9em"}} target="_blank" rel="noreferrer">
+                            <div>Tax_Certificate.pdf</div>
+                        </a>
+                    </div>
                 </div>
             </div>
 
